@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_top_spacing">10dp</dimen>
+    <dimen name="card_left_spacing">10dp</dimen>
+    <dimen name="card_right_spacing">10dp</dimen>
+    <dimen name="card_bottom_spacing">10dp</dimen>
+</resources>

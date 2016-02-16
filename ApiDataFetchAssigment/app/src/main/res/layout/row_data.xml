@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="model"
+            type="com.shashank.apidatafetchassigment.models.Data"/>
+    </data>
+    <android.support.v7.widget.CardView
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/imgCourseIcon"
+                android:layout_width="120dp"
+                android:layout_height="65dp"
+                app:defaultImage="@{@drawable/ic}"
+                app:imageUrl="@{model.imageUrl}"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/txtCourseTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgCourseIcon"
+                    style="@style/titleTextstyle"
+                    android:text="@{model.title}"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

@@ -38,9 +38,9 @@ public class MainActivity extends BaseActivity {
 
 
     public void callApi() {
-//        mBinding.rvData.setVisibility(View.GONE);
-//        mBinding.relNoNetwork.setVisibility(View.GONE);
-//        mBinding.prgCoursesLoader.setVisibility(View.VISIBLE);
+        mBinding.rvData.setVisibility(View.GONE);
+        mBinding.getRoot().findViewById(R.id.relNoNetwork).setVisibility(View.GONE);
+        mBinding.prgCoursesLoader.setVisibility(View.VISIBLE);
         mClient.setListener(new ApiClient.onResponse() {
             @Override
             public void onSuccess(List<Data> data) {
@@ -48,17 +48,17 @@ public class MainActivity extends BaseActivity {
                 mBinding.rvData.addItemDecoration(new SpacingItemDecoration(getResources().getDimension(R.dimen.card_left_spacing), getResources().getDimension(R.dimen.card_top_spacing), getResources().getDimension(R.dimen.card_right_spacing), getResources().getDimension(R.dimen.card_bottom_spacing)));
                 mBinding.rvData.setAdapter(new RecyclerViewAdapter(data));
                 //on Success Hide Error Layout and Progress
-//                mBinding.rvData.setVisibility(View.VISIBLE);
-//                mBinding.relNoNetwork.setVisibility(View.GONE);
-//                mBinding.prgCoursesLoader.setVisibility(View.GONE);
+                mBinding.rvData.setVisibility(View.VISIBLE);
+                mBinding.getRoot().findViewById(R.id.relNoNetwork).setVisibility(View.GONE);
+                mBinding.prgCoursesLoader.setVisibility(View.GONE);
             }
 
             @Override
             public void onFailure(int ErrorCode, String msg) {
                 //On Failure Hide RecyclerView
-//                mBinding.rvData.setVisibility(View.GONE);
-//                mBinding.relNoNetwork.setVisibility(View.VISIBLE);
-//                mBinding.prgCoursesLoader.setVisibility(View.GONE);
+                mBinding.rvData.setVisibility(View.GONE);
+                mBinding.getRoot().findViewById(R.id.relNoNetwork).setVisibility(View.VISIBLE);
+                mBinding.prgCoursesLoader.setVisibility(View.GONE);
             }
         });
         mClient.call();

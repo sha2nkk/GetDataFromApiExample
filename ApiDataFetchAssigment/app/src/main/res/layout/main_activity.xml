@@ -23,18 +23,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <ProgressBar
-            android:id="@+id/prgCoursesLoader"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:visibility="gone"/>
+        <!--<ProgressBar-->
+            <!--android:id="@+id/prgCoursesLoader"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:visibility="gone"/>-->
 
-        <include
-            android:id="@+id/relNoNetwork"
-            android:layout_below="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            layout="@layout/item_no_network"/>
+        <!--<include-->
+            <!--android:id="@+id/relNoNetwork"-->
+            <!--android:layout_below="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--layout="@layout/item_no_network"/>-->
     </RelativeLayout>
 </layout>

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.shashank.apidatafetchassigment.BR;
 import com.shashank.apidatafetchassigment.R;
+import com.shashank.apidatafetchassigment.databinding.RowDataBinding;
 import com.shashank.apidatafetchassigment.models.Data;
 
 import java.util.List;
@@ -25,13 +26,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<CommonViewHolder> 
 
     @Override
     public CommonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View root = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_data, parent);
+        View root = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_data, parent , false);
         return new CommonViewHolder(root);
     }
 
     @Override
     public void onBindViewHolder(CommonViewHolder holder, int position) {
-        holder.getBinding().setVariable(BR.model, mDataList.get(position));
+        ((RowDataBinding)holder.getBinding()).setModel(mDataList.get(position));
         holder.getBinding().executePendingBindings();
     }
 

@@ -6,7 +6,6 @@
             type="com.shashank.apidatafetchassigment.models.Data"/>
     </data>
     <android.support.v7.widget.CardView
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
